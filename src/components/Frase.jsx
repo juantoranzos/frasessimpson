@@ -1,20 +1,20 @@
 import { Card } from "react-bootstrap";
 
-const Frase = () => {
+const Frase = ({personaje}) => {
     return(
         <section className="my-5">
-         <h2>Personajes</h2>
+         <h2>{personaje.character}</h2>
            <hr />
-           <img src="" alt="" />
+           <img className="mb-4" src={personaje.image} alt="{personaje.character}" />
            <Card>
             <Card.Body>
             <figure>
 
   <blockquote className="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>{personaje.quote}</p>
   </blockquote>
   <figcaption className="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+  {personaje.character} in <cite title="Source Title">The Simpson</cite>
   </figcaption>
 </figure>
 
