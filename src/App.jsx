@@ -12,7 +12,7 @@ function App() {
    consultarAPI()
   },[])
   const consultarAPI = async ()=>{
-    //realizar una peticin get
+    //realizar una peticion get
     //https://thesimpsonsquoteapi.glitch.me/quotes
     try{
       const respuesta = await fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
@@ -31,7 +31,7 @@ function App() {
 <Container className='text-center my-5'>
       <img src={logo} alt="logo de los simpson"  className='w-50'/>
       <Frase personaje ={personaje}/>
-      <Button variant='warning'> Obtener frase</Button>
+      <Button variant='warning' onClick={consultarAPI}> Obtener frase</Button>
   
 </Container>
 
